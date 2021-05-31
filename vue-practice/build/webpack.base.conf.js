@@ -1,3 +1,10 @@
+/*
+ * Author: 吴楚标
+ * Date: 2021-05-30 17:46:59
+ * LastEditors: 吴楚标
+ * LastEditTime: 2021-05-31 23:24:19
+ * Description:
+*/
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -36,6 +43,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'styles': resolve('src/assets/styles'),
     }
   },
   module: {

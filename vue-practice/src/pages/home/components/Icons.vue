@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-01 11:21:23
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-01 20:50:39
+ * @LastEditTime: 2021-06-01 21:11:54
  * @Description:
 -->
 <template>
@@ -92,6 +92,8 @@ export default {
   height: 0;
   padding-bottom: 50%;
 
+.icons
+  margin-top: .1rem
 .icon {
   position: relative;
   overflow: hidden;

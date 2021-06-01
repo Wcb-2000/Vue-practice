@@ -2,12 +2,12 @@
  * @Author: 吴楚标
  * @Date: 2021-06-01 10:28:27
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-01 11:07:00
+ * @LastEditTime: 2021-06-01 20:11:49
  * @Description:
 -->
 <template>
 <div class="wrapper">
-  <swiper ref="mySwiper" :options="swiperOptions">
+  <swiper :options="swiperOptions">
     <swiper-slide v-for="item of swiperList" :key="item.id">
       <img class="swiper-img" :src="item.imgUrl" alt="">
     </swiper-slide>

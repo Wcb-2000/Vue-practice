@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-01 21:08:01
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-01 22:01:12
+ * @LastEditTime: 2021-06-02 00:06:25
  * @Description:
 -->
 <template>
@@ -11,7 +11,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <img class="item-img" :src="item.imgUrl" />
@@ -28,46 +28,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0005',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-05-31 21:30:29
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-05-31 23:25:14
+ * @LastEditTime: 2021-06-01 23:25:34
  * @Description:
 -->
 <template>
@@ -15,7 +15,7 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{this.city}}
       <span class="iconfont arrow-icon">&#xe64a;</span>
     </div>
   </div>
@@ -23,7 +23,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 

@@ -1,3 +1,10 @@
+/*
+ * Author: 吴楚标
+ * Date: 2021-05-30 17:46:59
+ * LastEditors: 吴楚标
+ * LastEditTime: 2021-06-01 23:02:51
+ * Description:
+*/
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -10,7 +17,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

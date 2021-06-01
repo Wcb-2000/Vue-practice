@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-01 22:04:30
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-01 22:30:48
+ * @LastEditTime: 2021-06-02 00:10:44
  * @Description:
 -->
 <template>
@@ -11,7 +11,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -29,46 +29,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://img1.qunarzz.com/travel/poi/1808/d6/85b1ca76d23d0837.jpg_640x480x70_eb914ad7.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        },
-        {
-          id: '0005',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '13315条评论'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -77,7 +39,6 @@ export default {
 @import '~styles/mixins.styl';
 
 .title {
-  margin-top: 0.2rem;
   line-height: 0.8rem;
   background: #eee;
   text-indent: 0.2rem;
@@ -87,7 +48,7 @@ export default {
   margin: .1rem
   overflow: hidden
   height: 0
-  padding-bottom: 75%
+  padding-bottom: 37.09%
 
   .item-img {
     width: 100%

@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-05-31 21:30:29
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-01 23:25:34
+ * @LastEditTime: 2021-06-02 11:20:47
  * @Description:
 -->
 <template>
@@ -14,10 +14,12 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="iconfont arrow-icon">&#xe64a;</span>
-    </div>
+    <router-link to='/city'>
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont arrow-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -36,7 +38,7 @@ export default {
  */
 .header {
   display: flex;
-  line-height: 0.86rem;
+  line-height: $headerHeight
   background: $bgColor;
   color: #fff;
 
@@ -63,6 +65,7 @@ export default {
   }
 
   .header-right {
+    color: #fff
     width: 1.24rem;
     float: right;
     text-align: center;

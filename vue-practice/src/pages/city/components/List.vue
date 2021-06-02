@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-02 12:00:48
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-02 20:25:29
+ * @LastEditTime: 2021-06-02 21:31:53
  * @Description:
 -->
 <template>
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item, key) of cities" :key="key">
+      <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
           <div
@@ -46,10 +46,20 @@ export default {
   name: 'CityList',
   props: {
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   mounted () {
-    this.scoll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        console.log(this.letter)
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>

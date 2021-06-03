@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-05-31 21:30:29
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-02 11:20:47
+ * @LastEditTime: 2021-06-03 11:37:17
  * @Description:
 -->
 <template>
@@ -24,10 +24,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city']) // 共享数据 映射数组 city 到computed
   }
 }
 </script>
@@ -65,8 +66,9 @@ export default {
   }
 
   .header-right {
-    color: #fff
-    width: 1.24rem;
+    color: #fff;
+    padding: 0 .1rem
+    min-width: 1.04rem;
     float: right;
     text-align: center;
 

@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-03 22:53:43
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-03 23:52:39
+ * @LastEditTime: 2021-06-03 23:59:39
  * @Description:
 -->
 <template>
@@ -43,7 +43,12 @@ export default {
       }
     }
   },
+  // 进入页面触发监听滑动事件
   activated () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  // 全局解绑，离开界面，接触监听
+  deactivated () {
     window.addEventListener('scroll', this.handleScroll)
   }
 }

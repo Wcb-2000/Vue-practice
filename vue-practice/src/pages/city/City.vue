@@ -2,13 +2,13 @@
  * @Author: 吴楚标
  * @Date: 2021-06-02 10:55:38
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-02 21:28:06
+ * @LastEditTime: 2021-06-02 23:07:55
  * @Description:
 -->
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
     <city-alphabet :cities="cities" @change='handleLetterChange'></city-alphabet>
   </div>

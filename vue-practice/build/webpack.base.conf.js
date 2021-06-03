@@ -2,7 +2,7 @@
  * Author: 吴楚标
  * Date: 2021-05-30 17:46:59
  * LastEditors: 吴楚标
- * LastEditTime: 2021-05-31 23:24:19
+ * LastEditTime: 2021-06-03 21:24:56
  * Description:
 */
 'use strict'
@@ -44,6 +44,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'styles': resolve('src/assets/styles'),
+      'common': resolve('src/common'),
     }
   },
   module: {

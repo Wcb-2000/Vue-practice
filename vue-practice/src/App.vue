@@ -2,12 +2,13 @@
  * @Author: 吴楚标
  * @Date: 2021-05-30 17:46:59
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-03 12:00:43
+ * @LastEditTime: 2021-06-04 11:59:15
  * @Description:
 -->
 <template>
   <div id="app">
-    <keep-alive>
+    <!-- exclude 不包括哪个组件被缓存 -->
+    <keep-alive exclude="Detail">
       <!-- 路由内容被加载一次之后 放入keep-alive内存中 下次再使用 直接获取 减少加载次数  -->
       <router-view />
     </keep-alive>

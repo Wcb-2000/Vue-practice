@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-03 15:31:41
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-03 22:08:36
+ * @LastEditTime: 2021-06-04 11:49:41
  * @Description:
 -->
 <template>
@@ -10,17 +10,17 @@
     <div class="banner" @click="handleBannerClick">
       <img
         class="banner-img"
-        src="https://img1.qunarzz.com/vs_ceph_b2c_001/0361e555-7db4-4c86-b1db-83c00b1a643e.jpg_r_640x420x95_d337df8c.jpg"
+        :src="bannerImg"
       />
       <div class="banner-info">
-        <div class="banner-title">云南丽江</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe6de;</span>
-          39
+          {{this.bannerImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+    <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
@@ -28,11 +28,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'Detail',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['https://img1.qunarzz.com/vs_ceph_b2c_001/0361e555-7db4-4c86-b1db-83c00b1a643e.jpg_r_640x420x95_d337df8c.jpg',
-        'https://img1.qunarzz.com/vs_ceph_b2c_001/6e8aa1e6-09ba-46a8-beba-8415f377d406.jpg_r_1280x840x95_ede02e41.jpg']
+      showGallary: false
     }
   },
   methods: {

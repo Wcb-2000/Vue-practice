@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-02 19:44:11
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-02 22:46:17
+ * @LastEditTime: 2021-06-04 16:45:48
  * @Description:
 -->
 <template>
@@ -12,7 +12,7 @@
       v-for="item of letters"
       :key="item"
       :ref="item"
-      @touchstart="handleTouchStart"
+      @touchstart.prevent="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
       @click="handleLetterClick"

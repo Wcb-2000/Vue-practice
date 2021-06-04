@@ -2,7 +2,7 @@
  * @Author: 吴楚标
  * @Date: 2021-06-03 22:53:43
  * @LastEditors: 吴楚标
- * @LastEditTime: 2021-06-03 23:59:39
+ * @LastEditTime: 2021-06-04 11:00:49
  * @Description:
 -->
 <template>
@@ -70,6 +70,7 @@ export default {
     color: #fff
     font-size: .4rem
 .header-fixed
+  z-index: 2
   position: fixed
   top:0
   left: 0

@@ -2,7 +2,7 @@
  * Author: 吴楚标
  * Date: 2021-05-30 17:46:59
  * LastEditors: 吴楚标
- * LastEditTime: 2021-06-04 16:48:47
+ * LastEditTime: 2021-07-07 00:54:57
  * Description:
 */
 // The Vue build version to load with the `import` command
@@ -32,4 +32,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-// 路由就是根据网址的不用，返回不同的内容给用户
+// 路由就是根据网址的不同，返回不同的内容给用户

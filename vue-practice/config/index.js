@@ -2,7 +2,7 @@
  * Author: 吴楚标
  * Date: 2021-05-30 17:46:59
  * LastEditors: 吴楚标
- * LastEditTime: 2021-06-01 23:02:51
+ * LastEditTime: 2021-07-08 16:18:31
  * Description:
 */
 'use strict'
@@ -64,7 +64,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '.np,/',
 
     /**
      * Source Maps
